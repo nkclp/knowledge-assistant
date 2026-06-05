@@ -11,7 +11,7 @@ from datetime import datetime
 st.set_page_config(page_title="个人知识库助手", page_icon="📚")
 st.title("📚 个人知识库 + 智能推荐助手")
 
-API_KEY = "sk-f3e5fcd2e9ec462b9d31f1c3cd62c585"
+API_KEY = st.secrets["OPENAI_API_KEY"]
 client = OpenAI(api_key=API_KEY, base_url="https://api.deepseek.com/v1")
 
 # ========== 2. 加载 embedding 模型 ==========
